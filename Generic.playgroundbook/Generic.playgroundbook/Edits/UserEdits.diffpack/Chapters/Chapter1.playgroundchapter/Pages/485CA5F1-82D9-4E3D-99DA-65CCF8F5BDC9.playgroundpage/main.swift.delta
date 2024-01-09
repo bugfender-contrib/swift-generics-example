@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>protocol Cartable {
+    var name: String { get set}
+    var quantity: Int { get set }
+    var price: Double { get set }
+}
+
+class Product: Cartable {
+    var quantity: Int
+    var price: Double
+    var name: String
+    
+    init(name:String, price: Double, quantity: Int) {
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+    }
+}
+
+class BundleProduct: Product {
+    var numberOfItem: Int
+    
+    init(numberOfItem: Int, name:String, pricePerItem: Double, quantity: Int) {
+        self.numberOfItem = numberOfItem;
+        super.init(name: "Bundle of \(self.numberOfItem)Pcs \(name)", price: pricePerItem, quantity: quantity * self.numberOfItem)
+    }
+}
+
+class Cart&lt;T: Cartable&gt; {
+    var items: [T] = []
+    
+    func add(_ item: T) {
+       items.append(item)
+    }
+
+    func remove(_ item: T) {
+        items.removeLast()
+    }
+    
+    func allItems() {
+        print("Name \t Quantity \t Price \t Total")
+       for i in items {
+        print("\(i.name) \t  \(i.quantity) \t \(i.price) \t \(i.price * Double(i.quantity))")
+       }
+        print("\n")
+   }
+    
+    func totalPrice() -&gt; Double {
+        var t: Double = 0.0
+        
+        for i in self.items {
+            t += i.price * Double(i.quantity)
+        }
+        
+        return t
+    }
+    
+    func totalItems()-&gt; Int {
+        return items.count
+    }
+}
+
+var cart: Cart = Cart&lt;Product&gt;()
+cart.add(Product(name: "Sweat Shirt", price: 15.99, quantity: 10))
+cart.add(Product(name: "Samsung OLED", price: 1400.00, quantity: 1))
+cart.add(BundleProduct(numberOfItem: 10, name: "Pants ", pricePerItem: 50.00, quantity: 1))
+
+cart.allItems()
+print("Cart Quantity: \(cart.totalItems())")
+print("Cart Total Price: $\(cart.totalPrice())")
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1735}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

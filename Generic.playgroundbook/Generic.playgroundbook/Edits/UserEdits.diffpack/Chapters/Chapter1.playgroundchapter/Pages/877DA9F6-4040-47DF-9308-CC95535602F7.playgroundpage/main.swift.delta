@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>protocol MyType {
+    var name: String { get }
+}
+
+class TypeOne: MyType {
+    var id: Int
+    var name: String
+    
+    init(id: Int, name: String) {
+        self.id = id
+        self.name = name
+    }
+}
+
+class TypeTwo: TypeOne {
+    var color: String = "red"
+}
+
+protocol Listing {
+    associatedtype List
+    func get() -&gt; [List];
+}
+
+class ApiOne: Listing {
+    typealias List = TypeOne
+    func get() -&gt; [List] {
+        return [List(id: 1, name: "One")]
+    }
+}
+
+class ApiTwo: Listing {
+    typealias List = TypeTwo
+    func get() -&gt; [List] {
+        return [List(id: 2, name: "Two")]
+    }
+}
+
+class ListView {
+    private var api: (any Listing)
+    
+    init(api: (any Listing)) {
+        self.api = api
+        
+        for i in self.api.get() {
+            print((i as! MyType).name)
+        }
+    }
+}
+
+let listViewOne = ListView(api: ApiOne())
+let listViewTwo = ListView(api: ApiTwo())
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 893}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

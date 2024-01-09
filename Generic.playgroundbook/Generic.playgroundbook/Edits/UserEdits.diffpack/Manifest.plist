@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseContentIdentifier</key>
+	<string>com.apple.playgrounds.blank</string>
+	<key>BaseContentVersion</key>
+	<string>1.0</string>
+	<key>ContentType</key>
+	<string>PlaygroundBookUserEdit</string>
+	<key>Diffs</key>
+	<dict>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/485CA5F1-82D9-4E3D-99DA-65CCF8F5BDC9.playgroundpage/UserManifest.plist</key>
+		<string>Added</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/485CA5F1-82D9-4E3D-99DA-65CCF8F5BDC9.playgroundpage/main.swift</key>
+		<string>Modified</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/877DA9F6-4040-47DF-9308-CC95535602F7.playgroundpage/UserManifest.plist</key>
+		<string>Added</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/877DA9F6-4040-47DF-9308-CC95535602F7.playgroundpage/main.swift</key>
+		<string>Modified</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/9E6A073D-0AC3-4804-9105-50BA53EE9639.playgroundpage/UserManifest.plist</key>
+		<string>Added</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/9E6A073D-0AC3-4804-9105-50BA53EE9639.playgroundpage/main.swift</key>
+		<string>Modified</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/C4152505-8287-4888-B759-18388E2EA0B7.playgroundpage/UserManifest.plist</key>
+		<string>Added</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/C4152505-8287-4888-B759-18388E2EA0B7.playgroundpage/main.swift</key>
+		<string>Modified</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/E248A2F7-3AEA-4EAA-AF39-DE51128B848F.playgroundpage/UserManifest.plist</key>
+		<string>Added</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/E248A2F7-3AEA-4EAA-AF39-DE51128B848F.playgroundpage/main.swift</key>
+		<string>Modified</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/UserManifest.plist</key>
+		<string>Added</string>
+		<key>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</key>
+		<string>Modified</string>
+		<key>Chapters/Chapter1.playgroundchapter/UserManifest.plist</key>
+		<string>Added</string>
+	</dict>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+	<key>UpdatedContentVersion</key>
+	<string>1.0</string>
+</dict>
+</plist>

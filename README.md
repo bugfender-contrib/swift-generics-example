@@ -1,1 +1,1 @@
-# swift-generics-example
+This is the sample code from the article published here [Unlocking the Power of Swift Generics: A Comprehensive Guide for Developers](https://bugfender.com/blog/swift-generics/)

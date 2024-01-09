@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>struct StackNonGeneric {
+    var items: [PNG] = []
+    
+    mutating func push(_ item: PNG) {
+        items.append(item)
+    }
+    
+    mutating func pop() -&gt; PNG {
+        return items.removeLast()
+    }
+}
+
+struct Stack&lt;AnyImage&gt; {
+    var items: [AnyImage] = []
+    
+    mutating func push(_ item: AnyImage) {
+        items.append(item)
+    }
+    
+    mutating func pop(_ item: AnyImage) {
+        items.removeLast()
+    }
+    
+    func printAll() {
+        for i in items {
+            print(i)
+        }
+    }
+}
+
+
+struct PNG {
+    init() {
+        print("A PNG")
+    }
+}
+
+struct GIF {
+    init() {
+        print("A GIF")
+    }
+}
+
+struct JPEG {
+    init() {
+        print("A JPEG")
+    }
+}
+
+var imageHolder: Stack = Stack&lt;Any&gt;()
+
+imageHolder.push(PNG())
+imageHolder.push(GIF())
+imageHolder.push(JPEG())
+
+print("==============Stack Push============")
+imageHolder.printAll()
+
+
+imageHolder.pop(JPEG())
+print("==============Stack Pop============")
+imageHolder.printAll()
+
+print("==============Stack String============")
+var stringHolder: Stack = Stack&lt;String&gt;()
+stringHolder.push("NAFIZ")
+stringHolder.printAll()
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{1, 1113}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
